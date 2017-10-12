@@ -13,11 +13,12 @@ public class Quiz {
     
     public String reverseString(String word){
         //BASE CASE
-        //repeat until the word length is less than or equal to 1
-        if (word.length() <= 1) {
+        //repeat until the word length is equal to 0
+        if (word.length() == 0) {
         return word;
     }
-    //recursively return the word get rid of the first letter and add it to the end
+    //recursively return the word, get rid of the front letter 
+    //add the letter in front to the end
     return reverseString(word.substring(1)) + word.charAt(0);
 }
         
