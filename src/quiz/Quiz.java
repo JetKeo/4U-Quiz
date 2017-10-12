@@ -10,20 +10,18 @@ package quiz;
  * @author jetkeo
  */
 public class Quiz {
-    
-    public String reverseString(String word){
+
+    public String reverseString(String word) {
         //BASE CASE
         //repeat until the word length is equal to 0
         if (word.length() == 0) {
-        return word;
+            return word;
+        } else {
+            //recursively return the word, get rid of the front letter 
+            //add the letter in front to the end
+            return reverseString(word.substring(1)) + word.charAt(0);
+        }
     }
-    //recursively return the word, get rid of the front letter 
-    //add the letter in front to the end
-    return reverseString(word.substring(1)) + word.charAt(0);
-}
-        
-        
-    
 
     /**
      * @param args the command line arguments
@@ -34,5 +32,5 @@ public class Quiz {
         System.out.println(test.reverseString("class"));
 
     }
-    
+
 }
